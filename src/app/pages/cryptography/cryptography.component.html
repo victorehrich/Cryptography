@@ -1,0 +1,55 @@
+<div class="title">
+    <h3>Cryptography-page</h3>
+</div>
+<div>
+    <form [formGroup]="encryptForm">
+        <div class="form-control input-button">
+            <input
+            type="text"
+            placeholder="Write the text to encrypt"
+            formControlName="text"
+            >
+            <button (click)="clickToShowHide('text')" [disabled]="!this.encryptForm.controls['text'].value">{{wasToshoW('text') ? "Hide text":"Show text"}}</button>
+            <label *ngIf="wasToshoW('text')">{{showFormValue("text")}}</label>
+        </div>
+
+        <div class="form-control input-button">
+            <input
+            type="text"
+            placeholder="Write the 32bits key"
+            formControlName="key"
+            >
+            <button (click)="generateKey()">Generate a random key</button>
+            <button (click)="clickToShowHide('key')" [disabled]="!this.encryptForm.controls['key'].value">{{wasToshoW('key') ? "Hide key":"Show key"}}</button>
+            <label *ngIf="wasToshoW('key')">{{showFormValue("key")}}</label>
+        </div>
+
+        <div class="form-control input-button">
+            <input
+            type="text"
+            placeholder="Write the 32bits key"
+            formControlName="Iv"
+            >
+            <button (click)="generateIv()">Generate a random Iv</button>
+            <button (click)="clickToShowHide('Iv')" [disabled]="!this.encryptForm.controls['Iv'].value">{{wasToshoW('Iv') ? "Hide Iv":"Show Iv"}}</button>
+            <label *ngIf="wasToshoW('Iv')">{{showFormValue("Iv")}}</label>
+        </div>
+
+        <div class="form-control input-button">
+            <button (click)="encryptText()"
+            [disabled]="!this.encryptForm.controls['text'].value">Encrypt</button>
+            <button (click)="clickToShowHide('EncryotedText')" 
+            [disabled]="!this.encryptForm.controls['text'].value">{{wasToshoW('EncryotedText') ? "Hide encrypted text":"Show encrypted text"}}</button>
+            <label *ngIf="wasToshoW('EncryotedText')">{{showFormValue("EncryotedText")}}</label>
+        </div>
+
+        <div class="form-control input-button">
+            <button (click)="decryptText()"
+            [disabled]="!this.encryptForm.controls['EncryotedText'].value">Decrypt</button>
+            <button (click)="clickToShowHide('DecryotedText')" 
+            [disabled]="!this.encryptForm.controls['DecryotedText'].value">{{wasToshoW('DecryotedText') ? "Hide decrypted text":"Show decrypted text"}}</button>
+            <label *ngIf="wasToshoW('DecryotedText')">{{showFormValue("DecryotedText")}}</label>
+        </div>
+    </form>
+</div>
+

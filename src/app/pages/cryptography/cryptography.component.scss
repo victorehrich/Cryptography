@@ -1,0 +1,14 @@
+@import url(../../app.component.scss);
+
+.input-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.input-button input{
+    width: 14%;
+}
+.input-button :nth-child(n){
+    height: 24px;
+    margin-bottom: 12px;
+}

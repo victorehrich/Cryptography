@@ -1,0 +1,12 @@
+.main-container {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    overflow-y: auto;
+}
+button {
+    width: 15%;
+    height: 24px;
+}
