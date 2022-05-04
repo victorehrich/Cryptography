@@ -1,5 +1,5 @@
-# Task
-
+# Cryptography
+This project was build with <a href="https://www.npmjs.com/package/crypto-js">crypto-js</a> and has the purpose of being a web system where you can encrypt texts and objects and facilitate the generation of "keys" and "Ivs", as well as the decryption.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.4.
 
 ## Development server
